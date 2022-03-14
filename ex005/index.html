@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+<body>
+    <h1>titulo</h1>
+    <p class="nome_classe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, temporibus odit. Quos eos recusandae, ipsam placeat voluptatum pariatur est reiciendis commodi molestiae architecto fuga facere laudantium voluptate assumenda quisquam repellat.</p>
+    <p class="nome_classe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, temporibus odit. Quos eos recusandae, ipsam placeat voluptatum pariatur est reiciendis commodi molestiae architecto fuga facere laudantium voluptate assumenda quisquam repellat.</p>
+    <p id="nome_id">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore molestias ratione fugit minus in laudantium aut saepe magnam quia vero. Asperiores autem maxime velit saepe amet quae ullam laudantium sint.</p>
+
+    <script>
+        var tag = document.getElementsByTagName("h1")
+        tag[0].style.color = "blue"
+        var classe = document.getElementsByClassName("nome_classe")
+        classe[1].style.color = "purple"
+        var id = document.getElementById("nome_id")
+        id.style.color = "red"
+        var query = document.querySelector(".nome_classe")
+        query.style.color = "gray"
+    </script>
+</body>
+</html>
