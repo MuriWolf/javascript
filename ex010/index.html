@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite sua velocidade: <input type="number" name="txtvel" id="txtvel" placeholder="Sua velocidade"> Kmh
+    <input type="submit" value="Confirmar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular() {
+            var txtv = document.getElementById("txtvel")
+            var vel = Number(txtv.value)
+            var res = document.querySelector("div#res")
+            res.innerHTML = `<p>Sua velocidade atual é <strong>${vel} Kmh</strong><p>`
+            if (vel > 80) {
+                res.innerHTML += ("<p>Você esta <strong>multado</strong>!</p>")
+            }
+            res.innerHTML += ("<p>Digija sempre com cintos de segurança!</p>")
+        }
+    </script>
+</body>
+</html>
