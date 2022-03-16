@@ -18,8 +18,11 @@
             var pais = pais.value
             console.log(typeof(pais))
             var pais = pais.toLowerCase()
-            if (pais == "brasil") {
+            if (pais == "brasil" ) {
                 resultado.innerHTML = `<p>Você é <strong>brasileiro!</strong></p>`
+            }
+            else if (pais == "estados unidos" || pais == "eua" || pais == "estados unidos da america") {
+                resultado.innerHTML = `<p>Você é <strong>americano!</strong></p>`
             } else {
                 resultado.innerHTML = `<p>Você é <strong>estrangeiro!</strong></p>`
             }
