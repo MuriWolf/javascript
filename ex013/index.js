@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var agora = new Date()
 var hora = agora.getHours()
 
@@ -19,7 +19,7 @@ if (hora >= 1 && hora < 6) {
      
 
 
-=======
+
 // menor 16 - nao vota, maior 16 vota, maior 70 - nao obrigatorio
 
 var idade = -1
@@ -39,4 +39,4 @@ else if ((idade >= 16) && (idade < 70)) {
 else {
     console.log("Voto não obrigatório!") // voto nao obrigatorio | idoso
 }
->>>>>>> 8fe5a388a17cc77c1374351bb8ff940c7e3125b6
+
