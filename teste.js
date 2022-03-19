@@ -1,11 +1,6 @@
-var itens = document.querySelectorAll('#lista .item')  
 
-for(let i = 0; i < itens.length; i++){
-    itens[i].style.color = 'red';
+console.log("Vai começar!")
+for (var c =1; c <= 6; c++) {
+    console.log(c)
 }
-
-var itens = document.querySelectorAll('#lista2 .item')  
-
-for(let i = 0; i < itens.length; i++){
-    itens[i].style.color = 'blue';
-}
+console.log("Fim do programa!")

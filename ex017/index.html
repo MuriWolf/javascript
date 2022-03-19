@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <section>
+        <div class="input-div-ano input-div">
+            Ano de nascimento: <input id="ano" type="number" >
+        </div>
+
+        <div class="input-div-sexo input-div">
+            <label for="">Sexo:</label>
+            <input type="radio" name="radsex" id="mas"><label for="mas">Masculino</label>
+            <input type="radio" name="radsex" id="fem"><label for="fem">Feminino</label>
+        </div>
+
+        <div class="input-div-verificar input-div"><input type="submit" value="Verificar" onclick="calcular()"></div>
+
+        <div id="res">Preeencha os dados acima para ver o resultado!</div>
+    </section>
+
+    <footer>Desenvolvido por MuriWolf</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

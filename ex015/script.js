@@ -1,11 +1,5 @@
-function calcular() {
-    var ano_nasc = document.getElementById("ano")
-    var ano_nasc = ano_nasc.value
-    var sexo
-    res = document.getElementById("res")
+var salario = Number(prompt("Digite o valor do salario: "))
+var aument_perc = Number(prompt("Digite o percentual do aumento: "))
+var salario_novo = salario + ((salario / 100) * aument_perc)
 
-    var data = new Date()
-    ano_atual = data.getFullYear()
-    idade = (ano_atual - ano_nasc)
-    res.innerHTML = `Detectamos ${idade} anos`
-}
+document.write("O novo salario é de: " + salario_novo.toLocaleString(`pt-BR`, {style: `currency`, currency: `BRL`}))
