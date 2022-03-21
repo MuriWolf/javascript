@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(35, 71, 138);
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    width: 600px;
+    padding: 10px;
+    border-radius: 8px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.479);
+    background-color: white;
+}
+
+div {
+    padding: 8px;
+}
+
+footer {
+    color: white;
+    text-align: center;
+}
