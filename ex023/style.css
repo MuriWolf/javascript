@@ -1,5 +1,6 @@
 body {
     background-color: rgb(35, 71, 138);
+    font-size: 120%
 }
 
 header {
@@ -20,12 +21,16 @@ div {
     padding: 8px;
 }
 
+button#adicionar {
+    display: inline;
+}
 
 select {
     width: 300px;
-    padding: 10px;
 }
-
+select > option {
+    font-size: 115%;
+}
 
 footer {
     color: white;
