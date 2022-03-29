@@ -32,13 +32,47 @@ var pessoa = {
     },
 
 }
-pessoa.bio()
-pessoa.comer("batata")
+// pessoa.bio()
+// pessoa.comer("batata")
+
+
 
 pessoa.olho = "verde"
 pessoa.altura = "171"
+pessoa.idade = 32
 
-console.log(
-    pessoa
-    
-)
+console.log(pessoa)
+console.log(pessoa["olho"])
+
+
+
+function cadastrar() {
+    var idade_input = document.getElementById("numero")
+    if (idade_input.value.length == 0) {
+        void 0
+    } else {
+        pessoa.idade = idade_input.value
+    }
+    console.log(pessoa)
+}
+
+var myDataName = 'nome';
+var myDataValue = 'Jorgin';
+pessoa[myDataName] = myDataValue;
+
+var pessoa1 = {
+    nome: 'Chris',
+    saudacao: function() {
+      alert('Oi! Meu nome é ' + this.nome + '.');
+    }
+  }
+  
+  var pessoa2 = {
+    nome: 'Brian',
+    saudacao: function() {
+      alert('Oi! Meu nome é ' + this.nome + '.');
+    }
+  } 
+  
+// alert(pessoa1.nome)
+// alert(pessoa2.nome)
