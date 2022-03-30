@@ -28,3 +28,4 @@ para2.textContent = `The cat's color is ${ cat.color }.`;
 
 document.body.appendChild(para1);
 document.body.appendChild(para2);
+
