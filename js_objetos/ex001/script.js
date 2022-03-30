@@ -14,9 +14,9 @@ const cat = {
 // Put your code here
 
 catName = cat["name"]
-cat.color = "white"
+cat.color = "black"
 
-alert(cat.greeting())
+cat.greeting2()
 
 // Don't edit the code below here
 
@@ -26,5 +26,5 @@ let para2 = document.createElement('p');
 para1.textContent = `The cat's name is ${ catName }.`;
 para2.textContent = `The cat's color is ${ cat.color }.`;
 
-// section.appendChild(para1);
-// section.appendChild(para2);
+document.body.appendChild(para1);
+document.body.appendChild(para2);
