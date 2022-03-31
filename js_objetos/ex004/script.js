@@ -13,8 +13,6 @@
 //     }
 // }
 
-
-
 class cat {
     constructor(name, breed, color) {
         this.name = name
