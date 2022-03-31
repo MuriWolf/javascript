@@ -4,21 +4,36 @@
 
 
 
-function cat(name, breed, color) {
-    this.name = name
-    this.breed = breed
-    this.color = color
-    this.greeting = function() {
-        console.log("meow")
+// function cat(name, breed, color) {
+//     this.name = name
+//     this.breed = breed
+//     this.color = color
+//     this.greeting = function() {
+//         console.log("meow")
+//     }
+// }
+
+
+
+class cat {
+    constructor(name, breed, color) {
+        this.name = name
+        this.breed = breed
+        this.color = color
+        this.greeting = function(frase) {
+            console.log(frase)
+        } 
     }
+    
 }
 
 var cat1 = new cat("pedro", "tigre", "azul")
 var cat2 = new cat("dois", "pincher", "amarelo")
 
-cat1.greeting()
-cat2.greeting()
-
+console.log(cat1)
+console.log(cat2)
+cat1.greeting("meeow")
+cat2.greeting("nyaa")
 
 
 // class pessoa{
