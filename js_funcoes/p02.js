@@ -1,7 +1,9 @@
 
 // EXPRESSÃO DE FUNÇÃO
 
-var square = function(number) {return number * number} // funcao anonima
+var square = function(number) {
+    return number * number
+} // funcao anonima
 
 var x = square(4)
 console.log(x) // recebe 16

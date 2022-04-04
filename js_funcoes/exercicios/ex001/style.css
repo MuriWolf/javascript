@@ -1,0 +1,21 @@
+#cel_fah-container {
+    width: 500px;
+    height: 600px;
+    padding: 10px;
+    margin: auto;
+    background-color: rgb(255, 195, 84);
+    border-radius: 6px;
+}
+
+#para {
+    display: inline;
+}
+
+#result {
+    margin-top: 40px;
+    padding: 10px;
+    font-size: 150%;
+    background-color: white;
+    text-align: center;
+    border: 2px solid orange;
+}

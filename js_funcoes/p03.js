@@ -6,16 +6,13 @@ ent quando o loop acabar, ele retorna o array resultado.
 */
 
 function map(f, b) {
-    var result = []
-    for (let i = 0; i != b.length; i++) {
-      result[i] = f(b[i])
-    }
-    return result
+  var result = []
+  for (let i=0; i != b.length; i++) {
+    result[i] = f(b[i])
   }
-  
-  console.log(map(function(y) {
-    return y*y*y
-  },
-     [0, 2, 4, 8, 16]))
-  
+  return result
+}
+
+console.log(map(function(y) {return y*y*y},[0, 2, 4, 8, 16]))
+
   

@@ -1,21 +1,47 @@
-function fora(x) {
-    function dentro(y) {
-       return x + y;
-    }
-    return dentro;
- }
-fn_inside = fora(3); // Pense nisso como: Receba uma função que adicionará 3 ao que quer que você repasse para ela
-result = fn_inside(5); // retorna 8
+var pet = function(nome) {          // A função externa define uma variável "nome"
+   var getNome = function() {
+      return nome;                // A função interna tem acesso à variável "nome"  da função externa
+   }
 
-console.log(result1 = fora(4)(5)) // retorna 8
+   return getNome;               // Retorna a função interna, expondo-a assim para escopos externos
+},
 
-function A(x) {
-    function B(y) {
-       function C(z) {
-          alert(x + y + z);
-       }
-       C(3);
-    }
-    B(2);
- }
- A(1); // Exibe um alerta com o valor 6 (1 + 2 + 3)
+myPet = pet("Vivie"); 
+
+console.log(myPet())                           // Retorna "Vivie"
+
+function pai(){
+   var x = 1;
+   function filho(){
+     console.log(x);
+     x++;
+   }
+   return filho;
+}
+
+var contador = pai();
+// contador();    // 1
+// contador();    // 2
+// contador();    // 3
+
+
+function ModuloMatematico(x, y) {     
+   var x = 0;     
+   function somaUm() {
+       x++;        
+       console.log(x);     
+   }      
+   function subtraiUm() {         
+       x--;
+       console.log(x);     
+   }
+   return {         
+       somaUm: somaUm,         
+       subtraiUm: subtraiUm     
+   }; 
+}
+var teste = ModuloMatematico();  
+teste.somaUm();     // 1 
+teste.somaUm();     // 2
+teste.somaUm();     // 3
+teste.subtraiUm();  // 2

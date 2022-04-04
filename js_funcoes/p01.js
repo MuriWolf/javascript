@@ -2,8 +2,7 @@
 
 function minhaFuncao(objeto) {
     objeto.nome = "lucas";
-    objeto.idade = 34;
-    objeto.cor = "branco"
+
   }
   
 var pessoa = {nome:"joao", idade:15, cor:"pardo"}
