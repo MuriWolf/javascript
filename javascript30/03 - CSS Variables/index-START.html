@@ -21,11 +21,26 @@
   <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
   <style>
+	:root {
+		  --base: #ffff00;
+		  --spacing: 10px;
+		  --blur: 10px;
+	  }
 
+	img {
+		  background: var(--base);
+		  padding: var(--spacing);
+		  filter: blur(var(--blur));
+	  }
+
+
+	.hl {
+		color: var(--base)
+	}
+	
     /*
       misc styles, nothing to do with CSS variables
     */
-
     body {
       text-align: center;
       background: #193549;
@@ -45,6 +60,16 @@
   </style>
 
   <script>
+     const inputs = document.querySelectorAll('.controls input');
+
+    function hundleUpdate() {
+      const suffix = this.dataset.sizing || ""
+	  document.documentElement.style.setProperty(`--${this.name}` , this.value + suffix)
+    }
+
+	inputs.forEach(input => input.addEventListener("mousemove", hundleUpdate))
+	inputs.forEach(input => input.addEventListener("change", hundleUpdate))
+
   </script>
 
 </body>
