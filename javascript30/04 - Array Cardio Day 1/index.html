@@ -69,6 +69,25 @@
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    // const category = document.querySelector(".mw-body")
+    // const links = Array.from(category.querySelectorAll("a"))
+    // const de = links.map(link => link.textContent).filter(deWord => deWord.includes("de "))
+    // console.log(de)
+
+    // https://anilist.co/user/MuriWolf/animelist/Completed
+
+    // const animesContainer = document.querySelector(".list-entries")
+    // const titles = Array.from(animesContainer.querySelectorAll(".title"))
+    // // pegar todos os <a> de todos os titulos 
+    // const titlesName = titles.map(title => title.querySelector("a").innerText)
+
+    // filtrar apenas os titulos com algo especifico
+    // const a = titlesName.filter(title => title.includes("a"))
+
+    // ordenar por order crescente a > z
+    // const alpha = titlesName.sort((lastOne, nextOne) => {
+    //   return lastOne > nextOne ? 1 : -1
+    // })
 
 
     // 7. sort Exercise
@@ -79,9 +98,23 @@
       return aLast > bLast ? 1 : -1
     })
     console.table(alpha)
+
     // 8. Reduce Exercise
     // Sum up the instances of each of these
-    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pao', 'pao' ];
+
+    const transportation = data.reduce((obj, item) =>{
+      // cria uma chave nova com o nome do item do array, CASO ele não exista
+      if (!obj[item]) {
+        obj[item] = 0
+      }
+      // soma 1 para a chave do item especifico
+      obj[item]++
+      return obj
+    }, {})
+    
+    console.table(transportation)
+    console.log(transportation)
 
   </script>
 </body>
