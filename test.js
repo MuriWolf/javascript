@@ -1,8 +1,8 @@
-
-const numeros = [5, 4, 6, 2, 1, 3, 6, 9, 8, 7]
-
-const getNumCres = numeros.sort((a, b) => {
-    return a > b ? 1 : -1
-})
-
-console.log(numeros)
+let a = 0
+let b = 5
+let c = 5
+let d = 1
+let e = 2
+a = b + c
+console.log(d + e);
+console.log(a);

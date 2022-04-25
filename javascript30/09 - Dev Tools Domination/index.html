@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8" />
+	<title>Console Tricks!</title>
+  </head>
+  <body>
+	<p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+	<script>
+	  const dogs = 
+	[{ name: 'Snickers', age: 2 },
+	{ name: 'hugo', age: 8 },
+	{name: 'Spiker', age: 5}];
+
+	  function makeGreen() {
+		const p = document.querySelector('p');
+		p.style.color = '#BADA55';
+		p.style.fontSize = '50px';
+	  }
+
+	  // Regular
+	  console.log("hello")
+
+	  // Interpolated
+	  console.log("Hello i am a %s string", "horrible")
+
+	  // Styled
+	  console.log("%c I am some great text", "color:red; font-size: 16px;")
+
+	  // warning!
+	  console.warn("OI OI OI")
+
+	  // Error :|
+	  console.error("WE ARE FUCKED")
+
+	  // Info
+	  console.info("The game Osu! was released in 2007")
+
+	  // Testing
+	  const p = document.querySelector('p');
+	  console.assert(p.classList.contains("randomClass"), "Tha is Wrong!")
+
+	  // clearing
+	  console.clear()
+
+	  // Viewing DOM Elements
+	  console.log(p)
+	  console.dir(p)
+
+	  // Grouping together
+	  dogs.forEach(dog => {
+		console.groupCollapsed(`${dog.name}`)
+		console.log(`This is ${dog.name}`)
+		console.log(`${dog.name} is ${dog.age} years old`)
+		console.log(`${dog.name} is ${dog.age * 7} years old`)
+		console.groupEnd(`${dog.name}`)
+	  })
+
+	  // counting
+	  console.count("hey")
+	  console.count("yeah")
+	  console.count("yeah")
+	  console.count("hey")
+	  console.count("hey")
+	  console.count("yeah")
+	  console.count("hey")
+	  console.count("yeah")
+	  
+	  // timing
+	  console.time("fetching data")
+	  fetch("https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json")
+	  .then(data => data.json())
+	  .then(data => {
+		  console.timeEnd("fetching data")
+		  console.log(data)
+	  })
+
+	  console.table(dogs)
+
+	</script>
+  </body>
+</html>

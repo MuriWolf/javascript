@@ -1,3 +1,7 @@
+:root {
+  --hl-color: rgb(38, 67, 199);
+}
+
 html {
   box-sizing: border-box;
 }
@@ -46,7 +50,7 @@ body {
   background: none;
   border: 0;
   line-height: 1;
-  color: white;
+  color: rgba(255, 255, 255, 0.712);
   text-align: center;
   outline: 0;
   padding: 0;
@@ -55,7 +59,7 @@ body {
 }
 
 .player__button:focus {
-  border-color: #ffc600;
+  border-color: var(--hl-color);
 }
 
 .player__slider {
@@ -99,9 +103,9 @@ body {
 
 .progress__filled {
   width: 50%;
-  background: #ffc600;
+  background: var(--hl-color);
   flex: 0;
-  flex-basis: 50%;
+  flex-basis: 0%;
 }
 
 /* unholy css to style input type="range" */
@@ -122,7 +126,7 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 8.4px;
   cursor: pointer;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.445);
   border-radius: 1.3px;
   border: 0.2px solid rgba(1, 1, 1, 0);
 }
@@ -131,7 +135,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 15px;
   width: 15px;
   border-radius: 50px;
-  background: #ffc600;
+  background: var(--hl-color);
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -3.5px;
@@ -139,7 +143,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #bada55;
+  background: #5067e6ab;
 }
 
 input[type=range]::-moz-range-track {
@@ -147,7 +151,7 @@ input[type=range]::-moz-range-track {
   height: 8.4px;
   cursor: pointer;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
-  background: #ffffff;
+  background: #ffffff7a;
   border-radius: 1.3px;
   border: 0.2px solid rgba(1, 1, 1, 0);
 }
@@ -157,6 +161,6 @@ input[type=range]::-moz-range-thumb {
   height: 15px;
   width: 15px;
   border-radius: 50px;
-  background: #ffc600;
+  background: var(--hl-color);
   cursor: pointer;
 }
