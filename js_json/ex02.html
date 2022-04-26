@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <style> 
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
       .main-div {
         width: 100%;
         margin: auto;
@@ -16,7 +20,23 @@
         width: 300px;
         height: 500px;
         background-color: rgb(213, 228, 247);
+        border: 2px solid rgb(133, 186, 255);
         margin: 10px;
+        border-radius: 8px;
+      }
+
+      .person-container > * {
+        text-align: center;
+      }
+
+      .person-container > img {
+        display: block;
+        margin: 10px auto;
+        border: 3px solid rgb(133, 186, 255);
+      }
+
+      .user-profile-img {
+        border-radius: 50%;
       }
     </style>
 </head>
@@ -24,51 +44,38 @@
   <div class="main-div">
 
   </div>
-  <!-- location:
-  city: "Sommersted"
-  coordinates: {latitude: '-11.5584', longitude: '13.5718'}
-  country: "Denmark"
-  postcode: 80816
-  state: "Hovedstaden"
-  street: {number: 9576, name: 'Ringgade'}
-  timezone: {offset: '-10:00', description: 'Hawaii'} -->
     <script>
-      function addSite(parent="document.body", el="div", txt="") {
+      function addElement(parent="", el="div", classe, txt="") {
         let name = document.createElement(el)
         name.innerHTML = txt
-        // name.classList.add(classe)
         parent.appendChild(name)
-        return 2 + 1
-      }
-
-      function cria(){
-          let personContainer = document.createElement("div")
-          personContainer.classList.add("person-container")
-          document.body.appendChild(personContainer)
-          return personContainer
-      }
+        if (!classe=="") {
+          name.classList.add(classe)
+        }
+        return name
+        }
 
       // pega os dados
       fetch("https://randomuser.me/api/?results=10")
       // transforma em json
       .then((resp) => resp.json())
       .then(data => {
-
         const users = data.results
         users.forEach(user => {
+          const body = document.body
 
-          console.log(user)
-          const personContainer = cria()
-
+          let personContainer = addElement(body, "div", "person-container", "")
+          
           let imgPerfil = document.createElement("img")
-          imgPerfil.src = user.picture.medium
+          imgPerfil.classList.add("user-profile-img")
+          imgPerfil.src = user.picture.large
           personContainer.appendChild(imgPerfil)
 
-          addSite(personContainer, "p", `${user.name.first} ${user.name.last}`)
-          addSite(personContainer, "p", user.gender)
-          addSite(personContainer, "p", user.email)
-          addSite(personContainer, "p", user.phone)
-          addSite(personContainer, "p", `${user.location.country} ${user.location.state} ${user.location.city}`)
+          addElement(personContainer, "p", "", `${user.name.first} ${user.name.last}`)
+          addElement(personContainer, "p", "", user.gender)
+          addElement(personContainer, "p", "", user.email)
+          addElement(personContainer, "p", "", user.phone)
+          addElement(personContainer, "p", "", `${user.location.country} ${user.location.state} ${user.location.city}`)
         });
       })
       .catch(error => {
