@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .main-div {
+            width: 90%;
+        }
+    </style>
 </head>
 <body>
     
@@ -19,8 +24,9 @@
                 }
             }
         }
-        const ul = document.createElement("ul");
-        document.body.appendChild(ul)
+        const mainDiv = document.createElement("div");
+        document.body.appendChild(mainDiv)
+        mainDiv.classList.add("main-div")
         console.log(json.pessoa1.social.twitter)
 
         fetch("https://raw.githubusercontent.com/Maujor/json/master/db.json")
@@ -31,10 +37,12 @@
                 if (livro.categoria.includes("Programação")) {
                     livro.categoria = "Livro de Dev hehe" 
                 }
+
+
                 console.log(livro)
                 let li =document.createElement("li")
                 li.innerHTML = JSON.stringify(livro.autores.autor1) 
-                ul.appendChild(li)
+                mainDiv.appendChild(li)
 
             })
             stringLivros = JSON.stringify(livros)
