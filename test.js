@@ -1,8 +1,9 @@
-let a = 0
-let b = 5
-let c = 5
-let d = 1
-let e = 2
-a = b + c
-console.log(d + e);
-console.log(a);
+
+const a = 2
+const b = 5
+
+
+for (let c=1; c<30; c++) {
+    const random = Math.floor(Math.random() * 6);
+    console.log(random)
+}

@@ -14,9 +14,13 @@ body {
   font-family: 'Amatic SC', cursive;
 }
 
+html { font-size: 62.5%;}
+body { font-size: 1.4rem; } /* = 14px*/
+h1 { font-size: 1.6rem; } /* = 16px*/
+
 h1 {
   text-align: center;
-  font-size: 10rem;
+  font-size: 10rem; 
   line-height: 1;
   margin-bottom: 0;
 }
