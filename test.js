@@ -1,39 +1,27 @@
-const cards = document.querySelectorAll(".c-card__content");
-const time1 = document.querySelector(".time1");
-const time2 = document.querySelector(".time2");
-const time3 = document.querySelector(".time3");
+let distanciaPerc = window.prompt("Digite a distancia percorrida (Km): ").toLowerCase();
+let consumoVeiculo = window.prompt("Digite o consumo do veículo (Km/l): ").toLowerCase();
+let tipoCombustivel = window.prompt("Digite Tipo combustivel (a-alcool, g-gasolina, d-diesel): ").toLowerCase();
 
-
-function getJson(time) {
-    fetch("data.json")
-    .then((resp)=> resp.json())
-    .then(function(data) {
-
-        let c = 0
-        cards.forEach(card =>{
-            const current = data[c].timeframes[time].current;
-            const previous = data[c].timeframes[time].previous;
-
-            texto1 = card.querySelector(".texto1");
-            texto2 = card.querySelector(".texto2");
-
-            texto1.textContent = current;
-            texto2.textContent = previous;
-            c++
-        })
-    }) 
+const precos = {
+    "alcool": 3.55,
+    "gasolina": 4.65,
+    "diesel": 4.77,
 }
 
-function daily() {
-    getJson("daily");
-}
-function weekly() {
-    getJson("weekly");
-}
-function monthly() {
-    getJson("monthly");
+let alcoolPreco = 3.55;
+let gasolinaPreco = 4.65;
+let dieselPreco = 4.77;
+
+let precoViagem = 0;
+
+if (tipoCombustivel == "a") {
+    precoViagem = precos["alcool"] * distanciaPerc;
+} else if (tipoCombustivel == "g") {
+    precoViagem = precos["gasolina"] * distanciaPerc;
+} else if (tipoCombustivel == "d") {
+    precoViagem = precos["diesel"] * distanciaPerc;
+} else {
+    precoViagem = "Algum erro ocorreu";
 }
 
-time1.addEventListener("click", daily);
-time2.addEventListener("click", weekly);
-time3.addEventListener("click", monthly);
+alert(`O preço da vigem é: R$ ${precoViagem.toFixed(2)}`);
