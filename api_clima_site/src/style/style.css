@@ -1,0 +1,11 @@
+.city-data > p, h5 {
+    margin-bottom: 0;
+}
+.city-data {
+    padding: 0.65em;
+}
+
+body {
+    background-color: rgb(42, 197, 232);
+}
+

@@ -10,26 +10,45 @@ integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1
 <link rel="stylesheet" href="src/style/style.css">
 </head>
 <body>
-    <header class="bg-dark text-white p-3">
+    <header class="bg-dark text-white p-3 d-flex justify-content-between align-content-center">
         <h3>Clima</h3>
-    </header>
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-md-6 mx-auto">
-                <h4 class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et perferendis tempore odit repellendus, eaque nihil!</h4>
-                <form action="" class="mt-4">
-                    <!-- <label for="lon" class="form-label">Longitude: </label>
-                    <input type="text" id="lon" class="form-control">
-                    <label for="lat" class="form-label">Latitude: </label>
-                    <input type="text" id="lat" class="form-control"> -->
-                </form>
-                <select class="form-control" name="estados" id="estados">
-                </select>
-                
-                <select class="form-control" name="cidades" id="cidades">
-                </select>
+        <div class="d-flex align-content-center">
+            <select class="form-control" name="estados" id="estados">
+            </select>
+            
+            <select class="form-control" name="cidades" id="cidades">
+            </select>
+            <button class="btn btn-primary mt-4 btn-send">Search</button>
+        </div>
 
-                <button class="btn btn-primary mt-4 btn-send">Search</button>
+    </header>
+    <div class="container rounded bg-white">
+        <div class="row mt-5 ">
+            <div class="col-md-8 mx-auto">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h3 class="city-name">Cidade nome</h3>
+                        <h1 class="temp">79c</h1>
+                        <h4 class="weather">sunny</h4>
+                        <h4><strong class="weather-day">day 44</strong> and <strong class="weather-night">night 23</strong></h4>
+                    </div>
+                    <div>
+                        <img class="weather-icon" src="icons/unknown.png" alt="">
+                    </div>
+                </div>
+                
+
+
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="d-flex justify-content-between align-content-center border city-data">
+                    <h5>Temperatura</h5>
+                    <p>33 graus celsius</p>
+                </div>
             </div>
 
         </div>

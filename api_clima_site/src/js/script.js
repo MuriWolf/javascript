@@ -62,21 +62,43 @@ btnSubmit.addEventListener("click", () => {
     const city = getCidade();
     const state = getNameEstado();
     
-    fetchAPI(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=a8964c08f0867f5163d14200e7698d52`).then(response => {
+    fetchAPI(`http://api.openweathermap.org/geo/1.0/direct?q=${city},br&limit=5&appid=a8964c08f0867f5163d14200e7698d52`).then(response => {
 
         response.every(function(local) {
             lat = local.lat; 
             lon = local.lon;
         })
     }).then(response => {
+        // dados de temperatura da cidade
         fetchAPI(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=a8964c08f0867f5163d14200e7698d52`).then(response => {
-            console.log(response)
+            console.log(response);
+            // console.log(response.weather[0].main);
+            const weatherMain = response.weather[0].main;
+            const weatherDesc = response.weather[0].description;
+            const weatherIcon = response.weather[0].icon;
+
+            const temp = response.main.temp;
+            const feels_like = response.main.feels_like;
+            const tempMax = response.main.temp_max;
+            const tempMin = response.main.temp_min;
+            const pressure = response.main.pressure;
+            const humidity = response.main.humidity;
+
+            const visibility = response.visibility;
+
+            const windSpeed = response.wind.speed;
+            const windDeg = response.wind.deg;
+
+            const clouds = response.clouds.all;
+
+            const sunrise = response.sys.sunrise;
+            const sunset = response.sys.sunset;
+
+            const timezone = response.timezone;
+
+            console.table({weatherMain, weatherDesc, weatherIcon, temp, feels_like, tempMax, tempMin, pressure, humidity, visibility, windSpeed, windDeg, clouds, sunrise, sunset, timezone})
         })
     })
-    
-    
-
 })
 
-
-
+//
