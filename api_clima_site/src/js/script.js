@@ -28,6 +28,19 @@ function getCidade() {
     return cidadeSelecionada;
 }
 
+function updateData(data, element) {
+    const elementA = document.querySelector(`.${element}`);
+    elementA.innerHTML = data;
+}
+
+function toCelsius(type, value) {
+    if (type == "fahrenheit") {
+        return 
+    } else if (type == "kelvin") {
+        return 
+    }
+}
+
 function showCidades(estadoSeleciondo) {
     fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoSeleciondo}/municipios`)
     .then(response => response.json())
@@ -61,6 +74,10 @@ const btnSubmit = document.querySelector(".btn-send");
 btnSubmit.addEventListener("click", () => {
     const city = getCidade();
     const state = getNameEstado();
+    const cityElement = document.querySelector(".city-name");
+    const stateElement = document.querySelector(".state-name");
+    stateElement.innerHTML = state;
+    cityElement.innerHTML = city + ", ";
     
     fetchAPI(`http://api.openweathermap.org/geo/1.0/direct?q=${city},br&limit=5&appid=a8964c08f0867f5163d14200e7698d52`).then(response => {
 
@@ -97,8 +114,14 @@ btnSubmit.addEventListener("click", () => {
             const timezone = response.timezone;
 
             console.table({weatherMain, weatherDesc, weatherIcon, temp, feels_like, tempMax, tempMin, pressure, humidity, visibility, windSpeed, windDeg, clouds, sunrise, sunset, timezone})
+
+            updateData(temp, "temp")
+            updateData(weatherDesc, "weather")
+
+            const weatherIconElement = document.querySelector(".weather-icon");
+            weatherIconElement.src = `icons/${weatherIcon}.png`;
+
         })
+
     })
 })
-
-//
