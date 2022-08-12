@@ -27,7 +27,7 @@ function getCidade() {
     const cidadeSelecionada = getOptionSelectedValue(cidadesSelect);
     return cidadeSelecionada;
 }
-
+// TODO CHANGE THE NAME
 function updateData(data, element) {
     const elementA = document.querySelector(`.${element}`);
     elementA.innerHTML = data;
