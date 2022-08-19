@@ -10,5 +10,5 @@ const requisicao = fetchAPI(
 
 requisicao.then(response => {
     console.log(response)
-}).catch(console.log("deu ruim"));
+}) 
 
