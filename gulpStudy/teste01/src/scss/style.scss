@@ -1,0 +1,21 @@
+@use "./base/variables" as *;
+@use "./base/typography";
+
+body {
+    background-color: $bg;
+    margin: 0;
+    padding: 0;
+
+    & > a {
+        text-decoration: none;
+        color: $red;
+    }
+}
+
+p {
+    color: #fff;
+}
+
+a {
+    transition: all 300ms ease-in-out;
+}
