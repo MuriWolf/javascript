@@ -4,4 +4,6 @@
 
  ## Descrição/description
  
- Esse repositório está armazenado meus estudos de Javascript, dos mais variados tipos, desde cursos até aprendizados específicos, há também diversos projetos que fiz mas não quis criar um repositório separado para ele. 
+ Esse repositório está armazenado meus estudos de Javascript, dos mais variados tipos, desde cursos até aprendizados específicos.
+ 
+ Existe também diversos projetos que fiz mas não quis criar um repositório separado para ele. 
